@@ -1,0 +1,12 @@
+[
+    {"fabricante": "INTEL", "id":"I1", "titulo": "Procesador Intel Celeron G5905 3.5GHz Socket 1200 Integrada", "valor": 5907, "imagen": "../images/INTEL/ID-1.jpg"},
+    {"fabricante": "INTEL", "id":"I2", "titulo": "Procesador Intel Core i3 12100F 12th Gen S1700 Sin Video", "valor": 16966, "imagen": "../images/INTEL/ID-2.jpg"},
+    {"fabricante": "INTEL", "id":"I3", "titulo": "Procesador Intel Core i5 10400F 4.3GHz Turbo 1200 Comet Lake", "valor": 22763, "imagen": "../images/INTEL/ID-3.jpg"},
+    {"fabricante": "INTEL", "id":"I4", "titulo": "Procesador Intel Core i3 12100 12th Gen S1700", "valor": 23371, "imagen": "../images/INTEL/ID-4.jpg"},
+    {"fabricante": "INTEL", "id":"I5", "titulo": "Procesador Intel Core i7 10700 4.8GHz Turbo Socket 1200 Comet Lake", "valor": 50684, "imagen": "../images/INTEL/ID-5.jpg"},
+    {"fabricante": "INTEL", "id":"I6", "titulo": "Procesador Intel Core i7 10700KF 5.1GHz Turbo 1200 Comet Lake ", "valor": 52222, "imagen": "../images/INTEL/ID-6.jpg"},
+    {"fabricante": "INTEL", "id":"I7", "titulo": "Procesador Intel Core i7 11700F S1200 11th Gen Rocket Lake", "valor": 53776, "imagen": "../images/INTEL/ID-7.jpg"},
+    {"fabricante": "INTEL", "id":"I8", "titulo": "Procesador Intel Core i7 12700KF 5.0GHz Turbo Socket 1700", "valor": 65855, "imagen": "../images/INTEL/ID-8.jpg"},
+    {"fabricante": "INTEL", "id":"I9", "titulo": "Procesador Intel Core i7 12700K 5.0GHz Turbo Socket 1700", "valor": 70280, "imagen": "../images/INTEL/ID-9.jpg"}
+    
+]

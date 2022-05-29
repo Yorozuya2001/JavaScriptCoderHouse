@@ -1,0 +1,1 @@
+let botones = document.getElementsByTagName("button")

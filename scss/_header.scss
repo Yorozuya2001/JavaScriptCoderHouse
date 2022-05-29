@@ -1,0 +1,40 @@
+$titulo: 2.5rem;
+$links: 1.8rem;
+$blanco: white;
+
+.header{
+    background: rgb(87,39,163);
+    background: linear-gradient(90deg, rgba(87,39,163,1) 26%, rgba(119,52,195,1) 50%, rgba(118,39,163,1) 72%);
+
+    &__nav{
+        
+        padding: 0px 15px;
+
+        &__titulo{
+            font-size: $titulo;
+            color: $blanco;
+            font-style: italic;
+            text-decoration: none;
+        }
+    
+        &__titulo:hover{
+            color: $blanco;
+        }
+
+        &__ul{
+            &__li{
+                &__a{
+                    font-size: $links;
+                    text-decoration: none;
+                    color: $blanco;
+                    margin: 0px 50px;
+                }
+                &__a:hover{
+                    font-size: $links;
+                    color: $blanco;
+                }
+            }
+        }
+    }
+
+}
