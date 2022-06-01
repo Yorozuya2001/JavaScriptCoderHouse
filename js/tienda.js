@@ -1,8 +1,18 @@
+
+    // ------------------------------------------//
+    // ----------- VARIABLES GLOBALES -----------//
+    // ------------------------------------------//
+
 let arrayConProductos= [];
 
 const btnAMD = document.getElementById('amd');
 const btnIntel = document.getElementById('intel');
 const btnAmbos = document.getElementById('ambos');
+
+    
+    // ------------------------------------------//
+    // ---------------- EVENTOS ---------------//
+    // ------------------------------------------//
 
 btnAMD.addEventListener("click",() => instrucciones('../json/amd-items.json'));
 
@@ -10,18 +20,23 @@ btnIntel.addEventListener("click",() => instrucciones ('../json/intel-items.json
 
 btnAmbos.addEventListener("click", () => instrucciones ('../json/ambos-items.json'))
 
+    // ------------------------------------------//
+    // ---------------- FUNCIONES ---------------//
+    // ------------------------------------------//
 
+
+    //FUNCION QUE OBTIENE EL JSON LOCAL TIENE COMO PARAMETRO LA RUTA DEL ARCHIVO
 
 function instrucciones(ubicacion) {
     remover('tienda-print');
     renderJson(ubicacion);
 }
-
+        //REMUEVE EL CONTENEDOR EN EL INDEX.HTML
 function remover(id){
     const elemento = document.getElementById(id)
     elemento.remove();
 }
-
+    //TRAE EL JSON Y LO MUESTRA EN EL INDEX.HTML
 function renderJson(ubicacion) {
     let row;
     const contenido = document.getElementById('contenido')
@@ -57,7 +72,7 @@ function renderJson(ubicacion) {
                 <div class="card-body">
                     <h5 class="card-title">${producto.titulo}</h5>
                     <div class=" pt-5 d-flex justify-content-between align-items-center">
-                        <button id="${producto.id}" value="${producto.id}" class="buttonClass">Comprar</button>
+                        <button id="${producto.id}" value="${producto.id}" class="buttonClass">Añadir</button>
                         <p class="card-precio">$ ${producto.valor}</p>
                     </div>
                 </div>
@@ -72,7 +87,7 @@ function renderJson(ubicacion) {
     
 }
 
-
+     //AÑADE EVENTOS A LOS BOTONES GENERADOS DESDE LA FUNCION RENDER JSON
 function botonesEventos(data) {
     let botones = document.querySelectorAll('.buttonClass')
     console.log(botones);
@@ -81,6 +96,13 @@ function botonesEventos(data) {
         botones[i].addEventListener('click', function() {
             data.forEach(producto => {
                 producto.id == botones[i].id && arrayConProductos.push(producto);
+                Swal.fire({
+                    position: 'bottom-end',
+                    icon: 'success',
+                    title: 'Producto añadido al carrito',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
             });
         });
 }

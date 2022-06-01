@@ -6,8 +6,7 @@
   text-decoration: none; }
 
 .header {
-  background: #5727a3;
-  background: linear-gradient(90deg, #5727a3 26%, #7734c3 50%, #7627a3 72%); }
+  background-color: black; }
   .header__nav {
     padding: 0px 15px; }
     .header__nav__titulo {
@@ -25,10 +24,13 @@
     .header__nav__ul__li__a:hover {
       font-size: 1.8rem;
       color: white; }
+    .header__nav__ul__li__carro {
+      width: 80px;
+      height: 80px; }
 
 .main {
-  background: #5727a3;
-  background: linear-gradient(90deg, #5727a3 26%, #7734c3 50%, #7627a3 72%); }
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); }
 
 .home {
   padding: 30px 0px;
@@ -113,6 +115,64 @@
 .buttonClass:hover {
   background: linear-gradient(#a20dbd, #c123de); }
 
+.contacto {
+  padding: 30px 0px; }
+
+.form {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+label {
+  font-size: 1.2rem;
+  margin: 10px 0px; }
+
+input {
+  width: 100%;
+  height: 40px;
+  color: black;
+  font-size: 1rem; }
+
+textarea {
+  width: 100%;
+  height: 200px;
+  margin: 10px 0px;
+  color: black;
+  font-size: 1rem; }
+
+.h5-text {
+  font-size: 2rem;
+  color: white; }
+
+.h6-text {
+  font-size: 1.5rem;
+  color: black; }
+
+.buttonStyle {
+  background-color: #21D4FD;
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  border: 1px solid black !important;
+  font-size: 1.5rem;
+  height: 50px; }
+
+.buttonStyle:hover {
+  background-color: black;
+  background-image: none;
+  color: white;
+  transition: all 0.5s; }
+
 .footer {
-  background: #5727a3;
-  background: linear-gradient(90deg, #5727a3 26%, #7734c3 50%, #7627a3 72%); }
+  background-color: black;
+  padding: 5px; }
+  .footer .p {
+    color: white;
+    font-size: 2rem; }
