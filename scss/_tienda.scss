@@ -1,18 +1,16 @@
 $fuenteTitulo: 2.0rem;
 $fuenteParrafo: 1.8rem;
-$blanco: white;
 $negro: black;
+
 .tienda{
     padding: 30px 0px;
-    border-bottom: 2px solid $blanco;
+    border-bottom: 2px solid $negro;
     &__titulo{
         font-size: $fuenteTitulo;
-        color: $blanco;
+        color: $negro;
+        font-family: 'Anton', sans-serif;
     }
     &__containerEdit{
-        background-color: $blanco;
-        border-radius: 10px;
-        border: 1px solid violet;
 
         &__parrafo{
             font-size: $fuenteParrafo;
@@ -65,6 +63,11 @@ $negro: black;
     flex: 1 1 auto;
     padding: 1rem 1rem;
     border-top: 2px solid rgb(87,39,163);
+}
+
+.card-body-canva{
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
 }
 
 .card-precio{

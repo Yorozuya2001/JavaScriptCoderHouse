@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Shop Simulator</title>
 </head>
@@ -36,11 +37,35 @@
                         </li>
                     </ul>
                 </div>
-                <img id="carro" class="header__nav__ul__li__carro" src="./icons/empty-cart.png" alt="Carrito">
+                <div class="position-relative">
+                    <img id="carro" class="header__nav__ul__li__carro" src="./icons/empty-cart.png" alt="Carrito"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <span id="contadorProductos" class="position-absolute position translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden">Productos añadidos al carrito</span>
+                    </span>
+
+                </div>
             </div>
         </nav>
     </header>
     <main class="main">
+        <div id="carritoCanva">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div id="carritoCanvaBody" class="offcanvas-body d-flex flex-column align-items-center">
+                    
+                </div>
+                <div class="offcanvas-header d-flex flex-column">
+
+                </div>
+            </div>
+        </div>
         <section id="home" class="home">
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <h2 class="home__titulo">Bienvenido a Shop Simulator</h2>
@@ -70,28 +95,29 @@
             <h5 class="text-center my-4 h5-text">Contacto</h5>
             <div class="container">
                 <form id="form" class="form">
-                        <h6 class="text-center h6-text">Formulario de contacto</h6>
-                        <div class="field">
-                            <label  for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre aquí" required>
-                        </div>
-                        <div class="field">
-                            <label  for="apellido">Apellido</label>
-                            <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido aquí" required>
-                        </div>
-                        <div class="field">
-                            <label  for="email">Email</label>
-                            <input type="text" name="email" id="email" placeholder="example@gmail.com" required>
-                        </div>
-                        <div class="field">
-                            <label  for="telefono">Teléfono</label>
-                            <input type="text" name="telefono" id="telefono" placeholder="+54 9 5555 5555" required>
-                        </div>
-                        <div class="field">
-                            <label  for="consulta">Consulta</label>
-                            <textarea name="consulta" id="consulta" required></textarea>
-                        </div>
-                        <input class="buttonStyle" type="submit" id="button" value="Envíar consulta">
+                    <h6 class="text-center h6-text">Escribe tu consulta aquí</h6>
+                    <div class="field">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre aquí" required>
+                    </div>
+                    <div class="field">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="Escriba su apellido aquí"
+                            required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" name="telefono" id="telefono" placeholder="+54 9 5555 5555" required>
+                    </div>
+                    <div class="field">
+                        <label for="consulta">Consulta</label>
+                        <textarea name="consulta" id="consulta" required></textarea>
+                    </div>
+                    <input class="buttonStyle" type="submit" id="button" value="Envíar consulta">
                 </form>
             </div>
         </section>

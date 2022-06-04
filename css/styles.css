@@ -13,6 +13,7 @@
       font-size: 2.5rem;
       color: white;
       font-style: italic;
+      font-family: 'Anton', sans-serif;
       text-decoration: none; }
     .header__nav__titulo:hover {
       color: white; }
@@ -26,53 +27,55 @@
       color: white; }
     .header__nav__ul__li__carro {
       width: 80px;
-      height: 80px; }
+      height: 80px;
+      cursor: pointer; }
+
+.position {
+  left: 100%;
+  top: 30%; }
 
 .main {
-  background-color: #21D4FD;
-  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%); }
+  background-color: white; }
 
 .home {
   padding: 30px 0px;
-  border-bottom: 2px solid white; }
+  border-bottom: 2px solid black; }
   .home__titulo {
     font-size: 2.5rem;
-    color: white; }
+    color: black;
+    font-family: 'Anton', sans-serif; }
   .home__parrafo {
     font-size: 1.5rem;
-    color: white; }
+    color: black; }
 
 .tienda {
   padding: 30px 0px;
-  border-bottom: 2px solid white; }
+  border-bottom: 2px solid black; }
   .tienda__titulo {
     font-size: 2rem;
-    color: white; }
-  .tienda__containerEdit {
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid violet; }
-    .tienda__containerEdit__parrafo {
-      font-size: 1.8rem;
-      font-style: italic;
-      color: black;
-      padding-top: 10px; }
-    .tienda__containerEdit__botonAMD {
-      box-shadow: 0px 2px 15px -1px #ef0707;
-      margin: 10px 30px;
-      border: 2px solid #ef0707; }
-    .tienda__containerEdit__botonIntel {
-      box-shadow: 0px 2px 15px -1px #127CC1;
-      margin: 10px 30px;
-      border: 2px solid #127CC1; }
-    .tienda__containerEdit__botonAmbos {
-      box-shadow: 0px 2px 15px -1px black;
-      margin: 10px 30px;
-      border: 2px solid black;
-      width: 200px;
-      height: 200px; }
-    .tienda__containerEdit .dimension {
-      width: 200px; }
+    color: black;
+    font-family: 'Anton', sans-serif; }
+  .tienda__containerEdit__parrafo {
+    font-size: 1.8rem;
+    font-style: italic;
+    color: black;
+    padding-top: 10px; }
+  .tienda__containerEdit__botonAMD {
+    box-shadow: 0px 2px 15px -1px #ef0707;
+    margin: 10px 30px;
+    border: 2px solid #ef0707; }
+  .tienda__containerEdit__botonIntel {
+    box-shadow: 0px 2px 15px -1px #127CC1;
+    margin: 10px 30px;
+    border: 2px solid #127CC1; }
+  .tienda__containerEdit__botonAmbos {
+    box-shadow: 0px 2px 15px -1px black;
+    margin: 10px 30px;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px; }
+  .tienda__containerEdit .dimension {
+    width: 200px; }
 
 .card {
   position: relative;
@@ -89,6 +92,10 @@
   flex: 1 1 auto;
   padding: 1rem 1rem;
   border-top: 2px solid #5727a3; }
+
+.card-body-canva {
+  flex: 1 1 auto;
+  padding: 1rem 1rem; }
 
 .card-precio {
   font-size: 1.3rem;
@@ -151,24 +158,18 @@ textarea {
 
 .h5-text {
   font-size: 2rem;
-  color: white; }
+  font-family: 'Anton', sans-serif;
+  color: black; }
 
 .h6-text {
   font-size: 1.5rem;
   color: black; }
 
 .buttonStyle {
-  background-color: #21D4FD;
-  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-  border: 1px solid black !important;
+  background-color: black;
+  color: white;
   font-size: 1.5rem;
   height: 50px; }
-
-.buttonStyle:hover {
-  background-color: black;
-  background-image: none;
-  color: white;
-  transition: all 0.5s; }
 
 .footer {
   background-color: black;

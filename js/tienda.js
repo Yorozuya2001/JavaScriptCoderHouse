@@ -73,7 +73,7 @@ function renderJson(ubicacion) {
                     <h5 class="card-title">${producto.titulo}</h5>
                     <div class=" pt-5 d-flex justify-content-between align-items-center">
                         <button id="${producto.id}" value="${producto.id}" class="buttonClass">Añadir</button>
-                        <p class="card-precio">$ ${producto.valor}</p>
+                        <p class="card-precio">$ ${producto.valor} ARS</p>
                     </div>
                 </div>
             </div>
@@ -103,9 +103,16 @@ function botonesEventos(data) {
                     showConfirmButton: false,
                     timer: 1000
                 })
+                console.log(arrayConProductos);
+                sumarProducto()
             });
         });
 }
+}
+
+function sumarProducto() {
+    let badge = document.getElementById("contadorProductos")
+        badge.textContent = arrayConProductos.length;
 }
 
 
