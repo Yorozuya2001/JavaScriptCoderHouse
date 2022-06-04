@@ -40,11 +40,11 @@
                 <div class="position-relative">
                     <img id="carro" class="header__nav__ul__li__carro" src="./icons/empty-cart.png" alt="Carrito"
                         data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <span id="contadorProductos" class="position-absolute position translate-middle badge rounded-pill bg-danger">
+                    <span id="contadorProductos"
+                        class="position-absolute position translate-middle badge rounded-pill bg-danger">
                         0
                         <span class="visually-hidden">Productos añadidos al carrito</span>
                     </span>
-
                 </div>
             </div>
         </nav>
@@ -59,10 +59,18 @@
                         aria-label="Close"></button>
                 </div>
                 <div id="carritoCanvaBody" class="offcanvas-body d-flex flex-column align-items-center">
-                    
-                </div>
-                <div class="offcanvas-header d-flex flex-column">
 
+                </div>
+                <div class="offcanvas-footer d-flex flex-column">
+                    <div class="divCanvaFooter">
+                        <p>Procesadores Intel: </p>
+                        <p>Procesadores AMD: </p>
+                        <p>Total de procesadores: </p>
+                        <p>Valor total del carrito: $ 0</p>
+                        <p>Valor de impuestos: $ 0</p>
+                    </div>
+                    <button>Comprar</button>
+                    <button>Vaciar Carrito</button>
                 </div>
             </div>
         </div>

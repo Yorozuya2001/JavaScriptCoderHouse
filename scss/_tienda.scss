@@ -76,6 +76,32 @@ $negro: black;
     margin: 0!important;
 }
 
+.offcanvas-header{
+    background-color: black;
+    padding: 10px;
+
+    h5{
+        color: white;
+        font-family: 'Anton', sans-serif;
+    }
+
+    .btn-close{
+        background-color: white;
+    }
+}
+
+.divCanvaFooter{
+    background-color: black;
+    padding: 10px;
+
+    p{
+        color: white;
+        font-family: 'Anton', sans-serif;
+    }
+
+
+}
+
 
 .buttonClass {
     font-size:13px;

@@ -34,6 +34,12 @@
   left: 100%;
   top: 30%; }
 
+.navbar-light .navbar-toggler {
+  border-color: white; }
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; }
+
 .main {
   background-color: white; }
 
@@ -101,6 +107,22 @@
   font-size: 1.3rem;
   font-style: italic;
   margin: 0 !important; }
+
+.offcanvas-header {
+  background-color: black;
+  padding: 10px; }
+  .offcanvas-header h5 {
+    color: white;
+    font-family: 'Anton', sans-serif; }
+  .offcanvas-header .btn-close {
+    background-color: white; }
+
+.divCanvaFooter {
+  background-color: black;
+  padding: 10px; }
+  .divCanvaFooter p {
+    color: white;
+    font-family: 'Anton', sans-serif; }
 
 .buttonClass {
   font-size: 13px;
@@ -177,3 +199,8 @@ textarea {
   .footer .p {
     color: white;
     font-size: 2rem; }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .contenedor-nav-span {
+    display: flex;
+    flex-direction: row-reverse; } }
