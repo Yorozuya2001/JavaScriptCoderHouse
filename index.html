@@ -39,7 +39,8 @@
                 </div>
                 <div class="position-relative">
                     <img id="carro" class="header__nav__ul__li__carro" src="./icons/empty-cart.png" alt="Carrito"
-                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling">
                     <span id="contadorProductos"
                         class="position-absolute position translate-middle badge rounded-pill bg-danger">
                         0
@@ -51,27 +52,15 @@
     </header>
     <main class="main">
         <div id="carritoCanva">
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas offcanvas-end" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
+            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">Carrito de compras</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+                    <h5 id="offcanvasScrollingLabel">Carrito de compras</h5>
+                    <button id="close" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
                 </div>
-                <div id="carritoCanvaBody" class="offcanvas-body d-flex flex-column align-items-center">
-
-                </div>
-                <div class="offcanvas-footer d-flex flex-column">
-                    <div class="divCanvaFooter">
-                        <p>Procesadores Intel: </p>
-                        <p>Procesadores AMD: </p>
-                        <p>Total de procesadores: </p>
-                        <p>Valor total del carrito: $ 0</p>
-                        <p>Valor de impuestos: $ 0</p>
-                    </div>
-                    <button>Comprar</button>
-                    <button>Vaciar Carrito</button>
-                </div>
+                <div id="carritoCanvaBody" class="offcanvas-body d-flex flex-column align-items-center"></div>
+                <div id="carritoCanvaFooter"></div>
             </div>
         </div>
         <section id="home" class="home">
@@ -129,6 +118,7 @@
                 </form>
             </div>
         </section>
+
     </main>
     <footer class="footer">
         <p class="text-center p">Página hecha por<br>Axel Ariel Valiente</p>

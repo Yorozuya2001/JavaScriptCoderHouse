@@ -103,7 +103,6 @@ function botonesEventos(data) {
                     showConfirmButton: false,
                     timer: 1000
                 })
-                console.log(arrayConProductos);
                 sumarProducto()
             });
         });
