@@ -70,13 +70,16 @@ function footerRender() {
     const div = document.createElement("div");
     div.className ="divCanvaFooter";
     div.innerHTML = `
+    <div class="d-flex justify-content-between">
     <p>Procesadores Intel: ${carritoItems.intel}</p>
     <p>Procesadores AMD: ${carritoItems.amd}</p>
-    <p>Total de procesadores: ${carritoItems.totalCpu}</p>
-    <p>Valor total del carrito: $ ${carritoItems.valor}</p>
-    <p>Valor de impuestos: $ ${carritoItems.valor * 0.21}</p>
+    </div>
+    <div class="d-flex justify-content-between">
+    <p>Articulos: ${carritoItems.totalCpu}</p>
+    <p>Valor total del carrito: $ ${carritoItems.valor} ARS</p>
+    </div>
     <div class="d-flex flex-column">
-        <button>Pagar con MercadoPago</button>
+        <button onclick="pagarMP()">Pagar con MercadoPago</button>
         <button>Vaciar Carrito</button>
     </div>
     `
@@ -84,4 +87,32 @@ function footerRender() {
     footerCanva.appendChild(footerCanvaChildren);
     footerCanvaChildren.appendChild(div);
     return footerCanvaChildren;
+}
+
+const pagarMP = async () => {
+    const productosToMap = arrayConProductos.map(Element =>{
+        let nuevoElemento = {
+                    title: Element.fabricante,
+                    description: Element.titulo,
+                    picture_url: Element.imagen,
+                    category_id: Element.id,
+                    quantity: 1,
+                    currency_id: "ARS",
+                    unit_price: Element.valor
+        }
+
+        return nuevoElemento;
+    })
+
+    let response = await fetch('https://api.mercadopago.com/checkout/preferences',{
+        method: "POST",
+        headers:{
+            Authorization: "Bearer TEST-3657109204649175-060714-44f113b78d8cc9543419fcfccf4b2fd0-262917483"
+        },
+        body: JSON.stringify({
+            items: productosToMap
+        })
+    })
+    let data = await response.json()
+    window.open(data.init_point,"_blank")
 }

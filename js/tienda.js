@@ -45,6 +45,8 @@ function renderJson(ubicacion) {
     contenedor.setAttribute("id", "tienda-print");
 
     const container = document.createElement("div")
+    container.setAttribute("data-aos","fade-right")
+    container.setAttribute("data-aos-duration","2000")
     container.className = "container" ;
 
     contenido.appendChild(contenedor)

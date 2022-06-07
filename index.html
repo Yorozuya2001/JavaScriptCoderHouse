@@ -11,11 +11,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Shop Simulator</title>
 </head>
 
-<body>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <header class="sticky-lg-top header">
         <nav class="header__nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
@@ -39,8 +48,8 @@
                 </div>
                 <div class="position-relative">
                     <img id="carro" class="header__nav__ul__li__carro" src="./icons/empty-cart.png" alt="Carrito"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                    aria-controls="offcanvasScrolling">
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling">
                     <span id="contadorProductos"
                         class="position-absolute position translate-middle badge rounded-pill bg-danger">
                         0
@@ -52,12 +61,13 @@
     </header>
     <main class="main">
         <div id="carritoCanva">
-            <div class="offcanvas offcanvas-end" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas offcanvas-end" class="offcanvas offcanvas-start" data-bs-scroll="true"
+                data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" id="offcanvasScrolling"
+                aria-labelledby="offcanvasScrollingLabel">
                 <div class="offcanvas-header">
                     <h5 id="offcanvasScrollingLabel">Carrito de compras</h5>
                     <button id="close" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
                 </div>
                 <div id="carritoCanvaBody" class="offcanvas-body d-flex flex-column align-items-center"></div>
                 <div id="carritoCanvaFooter"></div>
@@ -73,17 +83,17 @@
             <h2 class="tienda__titulo text-center">Tienda</h2>
             <div class="container my-5 tienda__containerEdit">
                 <div id="contenido" class="py-4">
+                    <p class="tienda__containerEdit__parrafo text-center">Fabricantes
+                    </p>
+                    <div class="d-flex justify-content-center flex-wrap align-items-center">
+                        <button id="amd" class="tienda__containerEdit__botonAMD"><img class="img-fluid dimension"
+                                src="./icons/amd.png" alt="AMD"></button>
+                        <button id="intel" class="tienda__containerEdit__botonIntel"><img class="img-fluid dimension"
+                                src="./icons/intel.png" alt="Intel"></button>
+                        <button id="ambos" class="tienda__containerEdit__botonAmbos">AMBOS</button>
+                    </div>
                     <div id="tienda-print">
-                        <p class="tienda__containerEdit__parrafo text-center">Empezemos eligiendo tu fabricante
-                            preferido <br>Elige una opción!
-                        </p>
-                        <div class="d-flex justify-content-center flex-wrap align-items-center">
-                            <button id="amd" class="tienda__containerEdit__botonAMD"><img class="img-fluid dimension"
-                                    src="./icons/amd.png" alt="AMD"></button>
-                            <button id="intel" class="tienda__containerEdit__botonIntel"><img
-                                    class="img-fluid dimension" src="./icons/intel.png" alt="Intel"></button>
-                            <button id="ambos" class="tienda__containerEdit__botonAmbos">AMBOS</button>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -124,15 +134,37 @@
         <p class="text-center p">Página hecha por<br>Axel Ariel Valiente</p>
     </footer>
 
+    <!-- BOOTSTRAP -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+
+    <!-- EMAIL JS -->
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
         emailjs.init('Twkh82NJzf5gRFmy3')
     </script>
+
+    <!-- SWEET ALERT 2  -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS ANIMATION ON SCROLL -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+        });
+    </script>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AXEL VALIENTE SCRIPTS -->
+
+    <script src="./js/preloader.js"></script>
     <script src="./js/tienda.js"></script>
     <script src="./js/carrito.js"></script>
     <script src="./js/contacto.js"></script>
