@@ -78,9 +78,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6">
-                            <h2 class="home__titulo">Compra procesadores AMD e INTEL aquí</h2>
-                            <p class="home__parrafo">¡Simula la compra de uno o varios procesadores¡<br>Paga con
+                            <h2 class="home__titulo text-center">Compra procesadores AMD e INTEL aquí</h2>
+                            <p class="home__parrafo text-center">¡Simula la compra de uno o varios procesadores!<br>Haz un pago de
+                                prueba con
                                 MercadoPago.</p>
+                            <div class="d-flex justify-content-center">
+                                <img src="./icons/mp.png" class="img-fluid" alt="MercadoPago">
+                            </div>
                         </div>
                         <div class="col-sm-6 d-flex justify-content-center">
                             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -116,6 +120,37 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="home__titulo my-4 text-center">Datos para simular el pago</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 d-flex justify-content-center">
+                            <ul class="lista">
+                                <li>Tarjeta de crédito: Mastercard</li>
+                                <li>Número: 5031 7557 3453 0604</li>
+                                <li>Código de seguridad: 123</li>
+                                <li>Fecha de caducidad: 25/11</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 d-flex justify-content-center">
+                            <ul class="lista">
+                                <li>Tarjeta de crédito: Visa</li>
+                                <li>Número: 4509 9535 6623 3704</li>
+                                <li>Código de seguridad: 123</li>
+                                <li>Fecha de caducidad: 25/11</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 d-flex justify-content-center">
+                            <ul class="lista">
+                                <li>Tarjeta de crédito: American Express</li>
+                                <li>Número: 3711 803032 57522</li>
+                                <li>Código de seguridad: 1234</li>
+                                <li>Fecha de caducidad: 25/11</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -142,10 +177,10 @@
 
         </section>
         <section id="contacto" class="contacto">
-            <h5 class="text-center my-4 h5-text">Contacto</h5>
+            <h5 class="text-center my-4 h5-text">Contacto para verificación del pago</h5>
             <div class="container">
                 <form id="form" class="form">
-                    <h6 class="text-center h6-text">Escribe tu consulta aquí</h6>
+                    <h6 class="text-center h6-text">Escribe tus datos</h6>
                     <div class="field">
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre aquí" required>
@@ -164,7 +199,7 @@
                         <input type="text" name="telefono" id="telefono" placeholder="+54 9 5555 5555" required>
                     </div>
                     <div class="field">
-                        <label for="consulta">Consulta</label>
+                        <label for="consulta">Consultas y número de transacción</label>
                         <textarea name="consulta" id="consulta" required></textarea>
                     </div>
                     <input class="buttonStyle" type="submit" id="button" value="Envíar consulta">

@@ -78,16 +78,16 @@ function footerRender() {
     div.className ="divCanvaFooter";
     div.innerHTML = `
     <div class="d-flex justify-content-between">
-    <p>Intel: ${buscar("INTEL")}</p>
-    <p>AMD: ${buscar("AMD")}</p>
-    <p>Articulos: ${arrayConProductos.length}</p>
+    <p id="intel-canva">Intel: ${buscar("INTEL")}</p>
+    <p id="amd-canva">AMD: ${buscar("AMD")}</p>
+    <p id="articulos-canva">Articulos: ${arrayConProductos.length}</p>
     </div>
     <div>
-    <p>Valor total del carrito: ${sumaEnArray()} ARS</p>
+    <p id="valor-canva">Valor total del carrito: ${sumaEnArray()} ARS</p>
     </div>
     <div class="d-flex flex-column">
-        <button id="pagar">Pagar con MercadoPago</button>
-        <button>Vaciar Carrito</button>
+        <button id="pagar" class="buttonMP">Pagar con MercadoPago</button>
+        <button id="vaciar"class="buttonVaciar">Vaciar Carrito</button>
     </div>
     `
 
@@ -96,7 +96,10 @@ function footerRender() {
 
     const pagar = document.getElementById("pagar");
     pagar.addEventListener("click", pagarMP);
-    
+
+    const vaciar = document.getElementById("vaciar");
+    vaciar.addEventListener("click", vaciarCanva);
+
     return footerCanvaChildren;
 }
 
@@ -125,3 +128,33 @@ function buscar(string) {
     return contador;
 }
 
+const vaciarCanva = () =>{
+    const canvaBody = document.getElementById("carritoCanvaBody")
+    canvaBody.innerHTML = `
+    <p>Carrito Vaciado</p>
+    <p>Los prodcutos que añadiste han sido eliminados</p>
+    `
+    arrayConProductos = [];
+
+    const intelCont = traerDeDom("intel-canva");
+    const amdCont = traerDeDom ("amd-canva");
+    const arituclosCont= traerDeDom ("articulos-canva");
+    const valorTotalCarrito = traerDeDom("valor-canva");
+    const contadorDeProductos = traerDeDom("contadorProductos")
+    reestablecer(intelCont,"Intel: 0");
+    reestablecer(amdCont,"AMD: 0");
+    reestablecer(arituclosCont,"Articulos: 0");
+    reestablecer(valorTotalCarrito,"Valor total del carrito: 0");
+    reestablecer(contadorDeProductos,"0");
+
+    
+}
+
+const traerDeDom = (string) =>{
+    const elemento = document.getElementById(string)
+    return elemento;
+}
+
+const reestablecer = (elemento,contenido) =>{
+    elemento.textContent = contenido;
+}
