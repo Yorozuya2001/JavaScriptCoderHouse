@@ -74,13 +74,20 @@ function renderJson(ubicacion) {
                 <div class="card-body">
                     <h5 class="card-title">${producto.titulo}</h5>
                     <div class=" pt-5 d-flex justify-content-between align-items-center">
-                        <button id="${producto.id}" value="${producto.id}" class="buttonClass">Añadir</button>
+                        <button id="${producto.id}" value="${producto.id}">Añadir</button>
                         <p class="card-precio">$ ${producto.valor} ARS</p>
                     </div>
                 </div>
             </div>
             `;
             row.appendChild(col)
+
+            const button = document.getElementById(producto.id);
+            if (producto.fabricante === "AMD") {
+                button.className ="buttonClassAMD buttonQuery"
+            }else{
+                button.className ="buttonClassINTEL buttonQuery"
+            }
             contador++;
         })
         botonesEventos(data);
@@ -91,19 +98,28 @@ function renderJson(ubicacion) {
 
      //AÑADE EVENTOS A LOS BOTONES GENERADOS DESDE LA FUNCION RENDER JSON
 function botonesEventos(data) {
-    let botones = document.querySelectorAll('.buttonClass')
+    let botones = document.querySelectorAll('.buttonQuery')
     console.log(botones);
     for (let i = 0; i < botones.length; i++) {
         
         botones[i].addEventListener('click', function() {
             data.forEach(producto => {
                 producto.id == botones[i].id && arrayConProductos.push(producto);
-                Swal.fire({
+                const Toast = Swal.mixin({
+                    toast: true,
                     position: 'bottom-end',
-                    icon: 'success',
-                    title: 'Producto añadido al carrito',
                     showConfirmButton: false,
-                    timer: 1000
+                    timer: 1500,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                })
+                
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Procesador añadido al carrito'
                 })
                 sumarProducto()
             });

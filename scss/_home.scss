@@ -1,18 +1,24 @@
 $fuenteTitulo: 2.5rem;
 $fuenteParrafo: 1.5rem;
-$negro: black;
+$color: white;
 
 .home{
     padding: 30px 0px;
-    border-bottom: 2px solid $negro;
 
     &__titulo{
         font-size: $fuenteTitulo;
-        color: $negro;
+        color: $color;
         font-family: 'Anton', sans-serif;
     }
     &__parrafo{
         font-size: $fuenteParrafo;
-        color: $negro;
+        color: $color;
     }
+}
+
+.img-edit{
+    object-fit: cover;
+    height: 350px;
+    width: 100%;
+    border: 3px solid #FF8D29;
 }

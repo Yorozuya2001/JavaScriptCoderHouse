@@ -3,7 +3,7 @@ $links: 1.8rem;
 $blanco: white;
 
 .header{
-    background-color: black;
+    background-color: #FF8D29;
     
     
 
@@ -31,6 +31,7 @@ $blanco: white;
                     font-size: $links;
                     text-decoration: none;
                     color: $blanco;
+                    font-family: 'Anton', sans-serif;
                     margin: 0px 50px;
                 }
                 &__a:hover{

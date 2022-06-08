@@ -6,7 +6,7 @@
   text-decoration: none; }
 
 .header {
-  background-color: black; }
+  background-color: #FF8D29; }
   .header__nav {
     padding: 0px 15px; }
     .header__nav__titulo {
@@ -21,6 +21,7 @@
       font-size: 1.8rem;
       text-decoration: none;
       color: white;
+      font-family: 'Anton', sans-serif;
       margin: 0px 50px; }
     .header__nav__ul__li__a:hover {
       font-size: 1.8rem;
@@ -83,45 +84,63 @@
     transform: rotate(360deg); } }
 
 .main {
-  background-color: white; }
+  background-color: #541690; }
 
 .home {
-  padding: 30px 0px;
-  border-bottom: 2px solid black; }
+  padding: 30px 0px; }
   .home__titulo {
     font-size: 2.5rem;
-    color: black;
+    color: white;
     font-family: 'Anton', sans-serif; }
   .home__parrafo {
     font-size: 1.5rem;
-    color: black; }
+    color: white; }
+
+.img-edit {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+  border: 3px solid #FF8D29; }
 
 .tienda {
   padding: 30px 0px;
-  border-bottom: 2px solid black; }
+  border-bottom: 2px solid white; }
   .tienda__titulo {
     font-size: 2rem;
-    color: black;
+    color: white;
     font-family: 'Anton', sans-serif; }
   .tienda__containerEdit__parrafo {
     font-size: 1.8rem;
     font-style: italic;
-    color: black;
+    color: white;
     padding-top: 10px; }
   .tienda__containerEdit__botonAMD {
     box-shadow: 0px 2px 15px -1px #ef0707;
-    margin: 10px 30px;
+    margin: 0px 20px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10%;
+    background-color: #ef0707;
+    color: white;
+    font-family: 'Anton', sans-serif;
     border: 2px solid #ef0707; }
   .tienda__containerEdit__botonIntel {
     box-shadow: 0px 2px 15px -1px #127CC1;
-    margin: 10px 30px;
+    margin: 0px 20px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10%;
+    background-color: #127CC1;
+    color: white;
+    font-family: 'Anton', sans-serif;
     border: 2px solid #127CC1; }
   .tienda__containerEdit__botonAmbos {
-    box-shadow: 0px 2px 15px -1px black;
-    margin: 10px 30px;
-    border: 2px solid black;
-    width: 200px;
-    height: 200px; }
+    box-shadow: 0px 2px 15px -1px white;
+    margin: 0px 20px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 10%;
+    background-color: white;
+    color: black;
+    font-family: 'Anton', sans-serif;
+    border: 2px solid white; }
   .tienda__containerEdit .dimension {
     width: 200px; }
 
@@ -131,15 +150,15 @@
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #FFCD38;
   background-clip: border-box;
-  border: 2px solid #5727a3;
+  border: 2px solid #FF8D29;
   border-radius: .25rem; }
 
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
-  border-top: 2px solid #5727a3; }
+  border-top: 2px solid #FF8D29; }
 
 .card-body-canva {
   flex: 1 1 auto;
@@ -165,25 +184,35 @@
   .divCanvaFooter p {
     color: white; }
 
-.buttonClass {
+.buttonClassAMD {
   font-size: 13px;
-  font-family: Arial;
   width: 110px;
   height: 40px;
   border-width: 1px;
-  color: #ffffff;
-  border-color: #a511c0;
-  font-weight: bold;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  box-shadow: inset 0px 0px 0px -3px #e184f3;
-  text-shadow: inset -12px -50px 35px #9b14b3;
-  background: linear-gradient(#c123de, #a20dbd); }
+  box-shadow: 0px 2px 15px -1px #ef0707;
+  background-color: #ef0707;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  border: 2px solid #ef0707; }
 
-.buttonClass:hover {
-  background: linear-gradient(#a20dbd, #c123de); }
+.buttonClassINTEL {
+  font-size: 13px;
+  width: 110px;
+  height: 40px;
+  border-width: 1px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0px 2px 15px -1px #127CC1;
+  background-color: #127CC1;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  border: 2px solid #127CC1; }
 
 .contacto {
   padding: 30px 0px; }
@@ -235,7 +264,7 @@ textarea {
   height: 50px; }
 
 .footer {
-  background-color: black;
+  background-color: #FF8D29;
   padding: 5px; }
   .footer .p {
     color: white;
