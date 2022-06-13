@@ -1,5 +1,4 @@
 
-
 //TOMA LA IMAGEN QUE SE MUESTRA EN EL HEADER Y LE AÑADIMOS UN EVENTO
 const carro = document.getElementById("carro")
 carro.addEventListener("click",()=>renderCarro())
@@ -203,8 +202,10 @@ const reestablecer = (elemento,contenido) =>{
     elemento.textContent = contenido;
 }
 
+//FUNCIONES PARA LOCAL STORAGE
+
+
 function localStorageEnviar() {
-    console.log(arrayConProductos);
     arrayConProductos.length > 0 && localStorage.setItem("CarritoDeCompras",JSON.stringify(arrayConProductos))
 }
 
