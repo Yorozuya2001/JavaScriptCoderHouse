@@ -1,4 +1,3 @@
-
     // ------------------------------------------//
     // ----------- VARIABLES GLOBALES -----------//
     // ------------------------------------------//
@@ -8,6 +7,41 @@ let arrayConProductos= [];
 const btnAMD = document.getElementById('amd');
 const btnIntel = document.getElementById('intel');
 const btnAmbos = document.getElementById('ambos');
+
+
+
+    // ------------------------------------------//
+    // --------------- FUNCION DE ---------------//
+    // ---------------LOCAL STORAGE--------------//
+    // ------------------------------------------//
+
+    localStorageTraer() // Consigue el array con productos del local storage y lo reemplaza (si este existe en el local storage)
+
+function localStorageTraer() {
+    const arrayLS = JSON.parse(localStorage.getItem("CarritoDeCompras")) || false;
+
+    if (arrayLS != false) {
+        arrayConProductos = arrayLS;
+        acumuladorProducto();
+        
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-start',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+        
+        Toast.fire({
+            title: '¡Hola de nuevo!Tienes un pedido pendiente en tu carrito.'
+            })
+    }
+}
+
 
     
     // ------------------------------------------//
@@ -31,12 +65,16 @@ function instrucciones(ubicacion) {
     remover('tienda-print');
     renderJson(ubicacion);
 }
-        //REMUEVE EL CONTENEDOR EN EL INDEX.HTML
+
+    //REMUEVE EL CONTENEDOR EN EL INDEX.HTML
+
 function remover(id){
     const elemento = document.getElementById(id)
     elemento.remove();
 }
-    //TRAE EL JSON Y LO MUESTRA EN EL INDEX.HTML
+
+    //TRAE EL JSON Y LO RENDERIZA EN INDEX.HTML CUANDO EL USUARIO HACE CLICK EN EL BOTON CON EL EVENTO INCORPORADO
+
 function renderJson(ubicacion) {
     let row;
     const contenido = document.getElementById('contenido')
@@ -51,6 +89,7 @@ function renderJson(ubicacion) {
 
     contenido.appendChild(contenedor)
     contenedor.appendChild(container)
+
 
 
     fetch(ubicacion)
@@ -96,15 +135,15 @@ function renderJson(ubicacion) {
     
 }
 
-     //AÑADE EVENTOS A LOS BOTONES GENERADOS DESDE LA FUNCION RENDER JSON
+     //AÑADE EVENTOS A LOS BOTONES GENERADOS DESDE LA FUNCION RENDER JSON Y AÑADE ADÉMAS EL PRODUCTO A UN ARRAY Y UNA ALERTA QUE NOTIFICA QUE EL PRODUCTO SE AÑADIO AL CARRITO CUANDO EL USUASRIO HAGA CLICK EN AÑADIR
 function botonesEventos(data) {
     let botones = document.querySelectorAll('.buttonQuery')
-    console.log(botones);
     for (let i = 0; i < botones.length; i++) {
         
         botones[i].addEventListener('click', function() {
             data.forEach(producto => {
                 producto.id == botones[i].id && arrayConProductos.push(producto);
+                
                 const Toast = Swal.mixin({
                     toast: true,
                     position: 'bottom-end',
@@ -121,15 +160,14 @@ function botonesEventos(data) {
                     icon: 'success',
                     title: 'Procesador añadido al carrito'
                 })
-                sumarProducto()
+                acumuladorProducto()
             });
         });
 }
 }
 
-function sumarProducto() {
+// Indica la cantidad de productos añadidos al carrito sosteniendose de la longitud del array de productos lo muestra en la imagen del carrito
+function acumuladorProducto() {
     let badge = document.getElementById("contadorProductos")
         badge.textContent = arrayConProductos.length;
 }
-
-

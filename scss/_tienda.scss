@@ -157,6 +157,17 @@ $color: white;
     border: 2px solid #127CC1;
 }
 
+.disabled{
+    box-shadow: 0px 2px 15px -1px gray;
+    border-radius: 10px;
+    margin: 5px 0px;
+    background-color: gray;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    border: 2px solid gray;
+    cursor: default !important;;
+}
+
 .buttonVaciar{
     box-shadow: 0px 2px 15px -1px #ef0707;
     border-radius: 10px;

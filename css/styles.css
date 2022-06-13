@@ -98,8 +98,9 @@
 
 .img-edit {
   object-fit: cover;
-  height: 350px;
-  width: 100%;
+  height: 350px; }
+
+.cs-edit {
   border: 3px solid #FF8D29; }
 
 .lista li {
@@ -226,6 +227,16 @@
   font-family: 'Anton', sans-serif;
   border: 2px solid #127CC1; }
 
+.disabled {
+  box-shadow: 0px 2px 15px -1px gray;
+  border-radius: 10px;
+  margin: 5px 0px;
+  background-color: gray;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  border: 2px solid gray;
+  cursor: default !important; }
+
 .buttonVaciar {
   box-shadow: 0px 2px 15px -1px #ef0707;
   border-radius: 10px;
@@ -253,7 +264,9 @@
 
 label {
   font-size: 1.2rem;
-  margin: 10px 0px; }
+  margin: 10px 0px;
+  font-family: 'Anton', sans-serif;
+  color: white; }
 
 input {
   width: 100%;
@@ -275,20 +288,25 @@ textarea {
 
 .h6-text {
   font-size: 1.5rem;
-  color: white; }
+  color: white;
+  font-style: italic; }
 
 .buttonStyle {
+  box-shadow: 0px 2px 15px -1px #541690;
   background-color: #541690;
   color: white;
   font-size: 1.5rem;
-  height: 50px; }
+  height: 50px;
+  font-family: 'Anton', sans-serif;
+  border-radius: 10px;
+  border: 2px solid #541690; }
 
 .footer {
   background-color: #FF8D29;
   padding: 5px; }
   .footer .p {
     color: white;
-    font-size: 2rem; }
+    font-size: 1.2rem; }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .contenedor-nav-span {

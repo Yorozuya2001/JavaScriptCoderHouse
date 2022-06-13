@@ -20,6 +20,8 @@
 label{
     font-size: 1.2rem;
     margin: 10px 0px;
+    font-family: 'Anton', sans-serif;
+    color: white;
 }
 
 input{
@@ -47,11 +49,16 @@ textarea{
 .h6-text{
     font-size: 1.5rem;
     color: white;
+    font-style: italic;
 }
 
 .buttonStyle{
+    box-shadow: 0px 2px 15px -1px #541690;
     background-color: #541690;
     color: white;
     font-size: 1.5rem;
     height: 50px;
+    font-family: 'Anton', sans-serif;
+    border-radius: 10px;
+    border: 2px solid #541690;
 }
